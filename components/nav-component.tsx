@@ -1,21 +1,21 @@
 import Link from "next/link";
 
-const links = [
+export const links = [
   {
     label: "Home",
     route: "/",
   },
   {
-    label: "About",
-    route: "/about",
+    label: "About Us",
+    route: "/about-us",
   },
   {
     label: "Social Proof",
     route: "/social-proof",
   },
   {
-    label: "Form",
-    route: "/form",
+    label: "Contact Us",
+    route: "/contact-us",
   },
 ];
 
@@ -26,7 +26,7 @@ export function NavComponent() {
         <ul className="flex gap-10 space-x-10">
           {links.map(({ label, route }) => (
             <li key={label}>
-              <Link className="hover:text-zinc-400" href={route}>{label}</Link>
+              <Link className="hover:text-blue-500" href={route}>{label}</Link>
             </li>
           ))}
         </ul>

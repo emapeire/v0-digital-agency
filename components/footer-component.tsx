@@ -1,21 +1,20 @@
 import Link from 'next/link'
+import { links } from './nav-component'
+
+export const date = new Date().getFullYear()
 
 export function FooterComponent() {
   return (
-    <footer className="w-full h-[20%] bg-zinc-900 dark:bg-zinc-50 flex items-center justify-center text-zinc-50 dark:text-zinc-900">
+    <footer className="w-full h-[20%] flex items-center justify-center text-zinc-100">
       <div className="flex flex-col items-center">
-        <p className="text-base">© 2023 Our Digital Agency</p>
-        <div className="flex space-x-4">
-          <Link className="hover:text-zinc-100 dark:hover:text-zinc-800" href="#">
-            About Us
-          </Link>
-          <Link className="hover:text-zinc-100 dark:hover:text-zinc-800" href="#">
-            Our Services
-          </Link>
-          <Link className="hover:text-zinc-100 dark:hover:text-zinc-800" href="#">
-            Contact Us
-          </Link>
-        </div>
+        <p className="text-base">© {date} Our Digital Agency</p>
+        <ul className="flex space-x-10">
+          {links.map(({ label, route }) => (
+            <li key={label}>
+              <Link className="hover:text-blue-500" href={route}>{label}</Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </footer>
   )
