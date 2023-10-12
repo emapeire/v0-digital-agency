@@ -1,8 +1,9 @@
+import { Testimonials } from "@/components/home-component";
 import Image from "next/image";
 
 export default function SocialProof() {
   return (
-    <section className="pt-24 mb-44">
+    <section className="pt-24">
       <h1 className="text-4xl font-bold text-center tracking-tighter text-white">
         Social Proof
       </h1>
@@ -35,7 +36,9 @@ export default function SocialProof() {
           className="self-center"
         />
       </div>
-
+      <section className="flex text-center align-middle justify-center">
+        <Testimonials />
+      </section>
     </section>
   );
 }
