@@ -21,12 +21,12 @@ export const links = [
 
 export function NavComponent() {
   return (
-    <header className="w-full flex text-zinc-100">
+    <header className="w-full text-zinc-100 shadow-md pt-4">
       <nav className="container mx-auto flex justify-center px-4 md:px-6 py-2">
-        <ul className="flex gap-10 space-x-10">
+        <ul className="flex gap-4 md:gap-10 space-x-4 md:space-x-10">
           {links.map(({ label, route }) => (
             <li key={label}>
-              <Link className="hover:text-blue-500" href={route}>{label}</Link>
+              <Link className="text-lg font-medium py-1 px-2 transition duration-300 hover:bg-blue-500 hover:text-white rounded" href={route}>{label}</Link>
             </li>
           ))}
         </ul>

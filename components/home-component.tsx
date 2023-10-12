@@ -121,7 +121,7 @@ function Testimonials() {
   ];
 
   return (
-    <section className="w-full h-[40%] text-zinc-50">
+    <section className="w-full h-[40%] text-zinc-50 py-12">
       <h3 className="text-2xl md:text-4xl font-bold tracking-tighter">Testimonials</h3>
       <div className="flex overflow-x-auto scrollbar-hide space-x-8 p-8">
         {testimonials.map((testimonial, index) => (
