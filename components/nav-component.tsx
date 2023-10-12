@@ -26,7 +26,7 @@ export function NavComponent() {
         <ul className="flex gap-4 md:gap-10 space-x-4 md:space-x-10">
           {links.map(({ label, route }) => (
             <li key={label}>
-              <Link className="text-lg font-medium py-1 px-2 transition duration-300 hover:bg-blue-500 hover:text-white rounded" href={route}>
+              <Link className="text-md font-medium py-2 px-4 transition duration-300 hover:bg-blue-500 hover:text-white rounded" href={route}>
                 {label}
               </Link>
             </li>
