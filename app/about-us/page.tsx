@@ -10,7 +10,7 @@ export default function AboutUs() {
         At [Our Digital Agency], we are committed to delivering top-notch digital solutions tailored to your needs.<br />
         With a dedicated team of experts, we strive to push the boundaries and exceed expectations.
       </p>
-      <div className="mt-6 flex flex-col space-x-6">
+      <div className="mt-6 flex space-x-10 justify-center">
         <Image
           src="/vercel.svg"
           alt="vercel logo"
