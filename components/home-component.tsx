@@ -2,16 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
 
-interface SectionContainerProps {
+export interface SectionContainerProps {
   children: ReactNode;
 }
 
-interface LogoImageProps {
+export interface LogoImageProps {
   src: string;
   alt: string;
 }
 
-interface LinkButtonProps {
+export interface LinkButtonProps {
   href: string;
   children: ReactNode;
 }
@@ -25,7 +25,7 @@ export default function HomeComponent() {
   );
 }
 
-function HeroSection() {
+export function HeroSection() {
   return (
     <SectionContainer>
       <LogoImage src="/next.svg" alt="Logo" />
@@ -40,7 +40,7 @@ function HeroSection() {
   );
 }
 
-function SocialProofSection() {
+export function SocialProofSection() {
   return (
     <SectionContainer>
       <h2 className="text-2xl md:text-4xl font-bold tracking-tighter">Social Proof</h2>
@@ -53,7 +53,7 @@ function SocialProofSection() {
   );
 }
 
-function SectionContainer({ children }: SectionContainerProps) {
+export function SectionContainer({ children }: SectionContainerProps) {
   return (
     <section className="w-full h-[40%]">
       <div className="px-4 md:px-6 h-full flex flex-col justify-center items-center text-center space-y-4">
@@ -63,7 +63,7 @@ function SectionContainer({ children }: SectionContainerProps) {
   );
 }
 
-function LogoImage({ src, alt }: LogoImageProps) {
+export function LogoImage({ src, alt }: LogoImageProps) {
   return (
     <Image
       alt={alt}
@@ -80,7 +80,7 @@ function LogoImage({ src, alt }: LogoImageProps) {
   );
 }
 
-function LinkButton({ href, children }: LinkButtonProps) {
+export function LinkButton({ href, children }: LinkButtonProps) {
   return (
     <Link
       className="inline-flex h-10 items-center justify-center rounded-md px-8 py-4 text-ms font-medium shadow transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 bg-zinc-50 text-zinc-900 hover:bg-zinc-50/90 focus-visible:ring-zinc-300"
@@ -91,7 +91,7 @@ function LinkButton({ href, children }: LinkButtonProps) {
   );
 }
 
-function LogosContainer() {
+export function LogosContainer() {
   return (
     <div className="flex space-x-10">
       <LogoImage src="/vercel.svg" alt="Vercel Logo" />
@@ -100,7 +100,7 @@ function LogosContainer() {
   );
 }
 
-function Testimonials() {
+export function Testimonials() {
   const testimonials = [
     {
       text: "This is the best agency I've ever worked with. Their services are top-notch.",
